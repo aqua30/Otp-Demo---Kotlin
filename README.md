@@ -1,7 +1,7 @@
 # Otp Demo
 A learning project which focuses on designing an OTP flow using Firebase.
 
-## Components of used
+## Components used
 - Firebase for sending and verifying otp 🔥
 - Hilt for Dependency injection 💉
 - Data binding for view binding 🔖
