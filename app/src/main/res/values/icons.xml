@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ic_right_arrow">&#xf178;</string>
+    <string name="ic_mobile">&#xf10b;</string>
+    <string name="ic_question">&#xf059;</string>
+    <string name="ic_phone">&#xf10b;</string>
+</resources>

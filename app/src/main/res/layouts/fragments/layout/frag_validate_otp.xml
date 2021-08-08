@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="@id/guide_bottom"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guide_bottom">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="@{viewModel.loaderVisibility? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                android:id="@+id/button_validate_otp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_yellow_round_corners"
+                android:fontFamily="@font/font_awesome"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.onValidateOTPClick()}"
+                android:text="@string/ic_right_arrow"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:visibility="@{viewModel.loaderVisibility? View.GONE : View.VISIBLE}" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/view_validate_mobile_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Enter verification code"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide_top_mobile_input" />
+
+        <TextView
+            android:id="@+id/container_change_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:onClick="@{() -> viewModel.onChangeNumberClick()}"
+            android:text="@string/change_number"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/guide_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guide_bottom" />
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/text_gray"
+            app:layout_constraintLeft_toLeftOf="@id/container_change_number"
+            app:layout_constraintRight_toRightOf="@id/container_change_number"
+            app:layout_constraintTop_toBottomOf="@id/container_change_number"/>
+
+        <TextView
+            android:id="@+id/view_resent_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:paddingStart="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:clickable="@{viewModel.isResendClickable}"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="end | center_vertical"
+            android:onClick="@{() -> viewModel.onResendClick()}"
+            android:text="@{viewModel.resendText}"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/container_otp"
+            app:layout_constraintTop_toBottomOf="@id/container_otp" />
+
+        <TextView
+            android:id="@+id/view_error_otp"
+            android:layout_width="@dimen/dimen_120dp"
+            android:layout_height="@dimen/dimen_35dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center_vertical"
+            android:text="@string/invalid_otp"
+            android:textColor="@color/pink"
+            android:textSize="18sp"
+            android:visibility="@{viewModel.isError? View.VISIBLE : View.GONE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_otp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_top_mobile_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".85" />
+
+        <com.aqua30.otpdemo.screens.login.otpview.OtpView
+            android:id="@+id/container_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textColor="@color/slate"
+            android:textSize="@dimen/text_size_large"
+            app:cursorColor="@color/slate"
+            app:itemCount="6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_validate_mobile_header"
+            app:lineColor="@color/slate"
+            app:viewType="line" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isResendLoaderVisible? View.VISIBLE:View.GONE}"
+            app:layout_constraintTop_toTopOf="@id/view_resent_otp"
+            app:layout_constraintEnd_toEndOf="@id/view_resent_otp"
+            app:layout_constraintBottom_toBottomOf="@id/view_resent_otp"
+            app:layout_constraintStart_toStartOf="@id/view_resent_otp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.aqua30.otpdemo.screens.login.validateotp.ValidateOtpViewModel" />
+
+    </data>
+
+</layout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Otp Demo</string>
+
+    <string name="aqua30">\@aqua30</string>
+    <string name="header_login">Login</string>
+    <string name="header_home">Home</string>
+    <string name="resend">Resend OTP</string>
+    <string name="sending">Sending OTP...</string>
+    <string name="otp_sent">OTP sent to %s</string>
+    <string name="otp_not_sent">Unable to send OTP on %s</string>
+    <string name="change_number">Change number?</string>
+    <string name="invalid_otp">Incorrect OTP</string>
+    <string name="invalid_number">Invalid phone number</string>
+    <string name="need_help">Need help?</string>
+    <string name="contact_support">Contact support</string>
+    <string name="sure_logout">Logout?</string>
+    <string name="welcome">Welcome</string>
+    <string name="hey_there">Hey there!</string>
+    <string name="you_are">You are</string>
+    <string name="amazing">Amazing!!</string>
+    <string name="title_country_search">Country search</string>
+    <string name="hint_country_search">Search country by name, code, iso</string>
+    <string name="guideline">You have successfully authenticated via Mobile OTP using Firebase. You can logout anytime using the logout button below.</string>
+    <string name="logout_warning">You are about to logout of the app. Once logged out, you will have to log in again.</string>
+
+
+    <!-- animation transitions -->
+    <string name="image_logo_transition">logoImageTransition</string>
+    <string name="image_banner_transition">bannerImageTransition</string>
+    <string name="view_title_transition">titleTransition</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".18" />
+
+    <include
+        android:id="@+id/included_header"
+        layout="@layout/header"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guide_left"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/banner_view"
+        layout="@layout/banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintTop_toBottomOf="@id/guide_top" />
+
+    <FrameLayout
+        android:id="@+id/login_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_right"
+        app:layout_constraintTop_toBottomOf="@id/banner_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

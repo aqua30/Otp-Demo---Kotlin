@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OtpViewTheme">
+        <attr name="otpViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="OtpView">
+        <attr name="itemCount" format="integer" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemRadius" format="dimension" />
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="viewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="hideLineWhenFilled" format="boolean" />
+        <attr name="state_filled" format="boolean" />
+        <attr name="rtlTextDirection" format="boolean" />
+        <attr name="maskingChar" format="string" />
+    </declare-styleable>
+</resources>

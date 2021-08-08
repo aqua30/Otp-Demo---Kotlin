@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_aqua"
+        android:transitionName="@string/image_logo_transition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:src="@drawable/ic_medium" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://saurabhpant.medium.com/"
+            android:textSize="18sp"
+            android:textColor="@color/slate"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:src="@drawable/ic_github" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://github.com/aqua30"
+            android:textSize="18sp"
+            android:textColor="@color/slate"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

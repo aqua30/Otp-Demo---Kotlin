@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+}
+
+apply from: '../dependencies.gradle'
+
+android {
+    compileSdk project.ext.sdk.compile
+    buildToolsVersion project.ext.sdk.tools
+
+    defaultConfig {
+        applicationId project.ext.pkg.name
+        minSdk project.ext.sdk.min
+        versionCode project.ext.sdk.code
+        versionName project.ext.sdk.name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def appName = "Otp_Demo"
+            outputFileName = appName + "_${variant.versionName}.apk"
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/layouts', 'src/main/res/layouts/activities', 'src/main/res/layouts/fragments', 'src/main/res/layouts/custom']
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+
+    implementation project.ext.androidx.values()
+    implementation project.ext.hilt.values()
+    implementation project.ext.lifecycle.values()
+    implementation project.ext.firebase.values()
+    implementation project.ext.phoneValidator.values()
+    implementation project.ext.playServices.values()
+    implementation project.ext.ktxExtensions.values()
+    kapt project.ext.kapts.values()
+}
+
+kapt {
+    correctErrorTypes true
+}

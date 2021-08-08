@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dimen_16dp">
+
+    <ImageView
+        android:id="@+id/view_image_logout"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_35dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:src="@drawable/img_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_sub_header" />
+
+    <TextView
+        android:id="@+id/view_sub_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="@string/logout_warning"
+        android:textColor="@color/slate"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_header" />
+
+    <TextView
+        android:id="@+id/view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/sure_logout"
+        android:textColor="@color/slate"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
