@@ -24,6 +24,14 @@
 
         <activity android:name="com.aqua30.otpdemo.screens.login.LoginActivity" />
         <activity android:name="com.aqua30.otpdemo.screens.home.HomeActivity" />
+
+        <receiver
+            android:name="com.aqua30.otpdemo.data.otp.SmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

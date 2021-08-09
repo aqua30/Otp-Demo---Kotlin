@@ -37,17 +37,9 @@ class HomeActivity: BaseActivity() {
         val dialogBuilder = AlertDialog.Builder(this)
         val dialogView: View = layoutInflater.inflate(R.layout.logout_warning, null)
         dialogBuilder.setView(dialogView)
-        dialogView.findViewById<View>(R.id.view_image_logout).setOnClickListener { v: View? ->
+        dialogView.findViewById<View>(R.id.view_image_logout).setOnClickListener {
             pref.put(KEY_USER_LOGIN, false)
-            /*val activityOptionsCompat: ActivityOptionsCompat =
-                ActivityOptionsCompat.makeSceneTransitionAnimation(
-                    this,
-                    viewAppLogoImage,
-                    resourceMapper.getString(R.string.image_logo_transition)
-                )
-            val `in` = Intent(this, LoginActivity::class.java)
-            startActivity(`in`, activityOptionsCompat.toBundle())*/
-            finish()
+            finishAffinity()
         }
         dialogBuilder.show()
     }
