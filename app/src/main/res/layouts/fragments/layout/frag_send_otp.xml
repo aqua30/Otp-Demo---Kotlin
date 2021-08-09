@@ -80,9 +80,9 @@
 
         <View
             android:id="@+id/view_phone_underline"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:background="@color/slate"
             app:layout_constraintStart_toStartOf="@id/container_phone"
             app:layout_constraintEnd_toEndOf="@id/container_phone"
