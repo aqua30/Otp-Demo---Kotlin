@@ -11,7 +11,7 @@
         android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_aqua"
+        android:background="@drawable/ic_logo"
         android:transitionName="@string/image_logo_transition"
         app:tint="@color/orange" />
 

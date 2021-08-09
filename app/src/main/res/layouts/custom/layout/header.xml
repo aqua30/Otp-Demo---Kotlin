@@ -10,7 +10,7 @@
         android:layout_width="@dimen/dimen_60dp"
         android:layout_height="@dimen/dimen_60dp"
         android:layout_marginTop="@dimen/dimen_16dp"
-        android:src="@drawable/img_logo"
+        android:src="@drawable/ic_logo"
         android:transitionName="@string/image_logo_transition"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
