@@ -14,30 +14,26 @@
         android:layout_marginEnd="@dimen/dimen_16dp"
         android:src="@drawable/img_logout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_sub_header" />
 
     <TextView
         android:id="@+id/view_sub_header"
+        style="@style/HeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_16dp"
-        android:fontFamily="@font/open_sans_regular"
         android:text="@string/logout_warning"
-        android:textColor="@color/slate"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_header" />
 
     <TextView
         android:id="@+id/view_header"
+        style="@style/WarningTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans_bold"
         android:text="@string/sure_logout"
-        android:textColor="@color/slate"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

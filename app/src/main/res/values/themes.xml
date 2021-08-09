@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
@@ -10,5 +10,65 @@
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowBackground">@color/white</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="HeaderText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/slate</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="BannerText1" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/slate</item>
+        <item name="android:textSize">@dimen/text_size_36</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="BannerText2" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/slate</item>
+        <item name="android:textSize">@dimen/text_size_32</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="FieldTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="FieldError" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/pink</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="FieldText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/slate</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="WarningTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/slate</item>
+        <item name="android:textSize">@dimen/text_size_22</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="ActionButton" parent="TextAppearance.AppCompat">
+        <item name="android:background">@drawable/bg_action_button</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+        <item name="android:fontFamily">@font/font_awesome</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">@string/ic_right_arrow</item>
+        <item name="android:layout_width">@dimen/dimen_85dp</item>
+        <item name="android:layout_height">@dimen/dimen_45dp</item>
+    </style>
+
+    <style name="OrangeButton" parent="ActionButton">
+        <item name="android:backgroundTint">@color/orange</item>
+    </style>
+
+    <style name="YellowButton" parent="ActionButton">
+        <item name="android:backgroundTint">@color/yellow</item>
     </style>
 </resources>

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/img_unlock"
         android:transitionName="@string/image_banner_transition"
-        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintEnd_toEndOf="@id/guide_right"
         app:layout_constraintTop_toBottomOf="@id/guide_top" />
 
     <ImageView
@@ -22,60 +22,52 @@
         android:onClick="onLogout"
         android:src="@drawable/img_logout"
         app:layout_constraintBottom_toBottomOf="@id/guide_bottom"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guide_bottom" />
 
     <TextView
         android:id="@+id/view_text_welcome_header"
+        style="@style/BannerText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/open_sans_bold"
         android:text="@string/amazing"
-        android:textColor="@color/slate"
-        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@id/view_image_smartphone"
-        app:layout_constraintLeft_toLeftOf="@id/guide_left" />
+        app:layout_constraintStart_toStartOf="@id/guide_left" />
 
     <TextView
         android:id="@+id/view_text_header"
+        style="@style/BannerText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans_regular"
         android:text="@string/you_are"
-        android:textColor="@color/slate"
-        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@id/view_text_welcome_header"
-        app:layout_constraintLeft_toLeftOf="@id/view_text_welcome_header" />
+        app:layout_constraintStart_toStartOf="@id/view_text_welcome_header" />
 
     <TextView
         android:id="@+id/view_text_hurray"
+        style="@style/HeaderText"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="@dimen/dimen_0dp"
-        android:fontFamily="@font/open_sans_regular"
         android:gravity="center_vertical"
         android:text="@string/guideline"
-        android:textColor="@color/slate"
         android:layout_marginTop="@dimen/dimen_16dp"
-        android:textSize="18sp"
-        app:layout_constraintRight_toRightOf="@id/guide_right"
-        app:layout_constraintLeft_toLeftOf="@id/guide_left"
+        app:layout_constraintEnd_toEndOf="@id/guide_right"
+        app:layout_constraintStart_toStartOf="@id/guide_left"
         app:layout_constraintTop_toBottomOf="@id/view_image_smartphone"
         app:layout_constraintBottom_toTopOf="@id/guide_bottom"/>
 
     <TextView
         android:id="@+id/view_text_logout"
+        style="@style/HeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_8dp"
-        android:fontFamily="@font/open_sans_regular"
         android:gravity="center"
-        android:text="Logout"
+        android:text="@string/logout"
         android:onClick="onLogout"
-        android:textColor="@color/slate"
-        android:textSize="@dimen/text_size_medium"
-        app:layout_constraintLeft_toLeftOf="@id/view_image_logout"
-        app:layout_constraintRight_toRightOf="@id/view_image_logout"
+        app:layout_constraintStart_toStartOf="@id/view_image_logout"
+        app:layout_constraintEnd_toEndOf="@id/view_image_logout"
         app:layout_constraintTop_toBottomOf="@id/view_image_logout" />
 
     <androidx.constraintlayout.widget.Guideline

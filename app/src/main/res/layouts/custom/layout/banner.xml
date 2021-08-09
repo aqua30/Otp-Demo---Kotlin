@@ -15,26 +15,22 @@
 
     <TextView
         android:id="@+id/banner_sub_header"
+        style="@style/BannerText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/open_sans_bold"
         android:text="@string/welcome"
-        android:textColor="@color/slate"
-        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@id/banner_image"
-        app:layout_constraintLeft_toLeftOf="@id/banner_header" />
+        app:layout_constraintStart_toStartOf="@id/banner_header" />
 
     <TextView
         android:id="@+id/banner_header"
+        style="@style/BannerText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans_regular"
         android:text="@string/hey_there"
-        android:textColor="@color/slate"
-        android:textSize="36sp"
         android:transitionName="@string/view_title_transition"
         app:layout_constraintBottom_toTopOf="@id/banner_sub_header"
-        app:layout_constraintLeft_toRightOf="@id/banner_image" />
+        app:layout_constraintStart_toEndOf="@id/banner_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

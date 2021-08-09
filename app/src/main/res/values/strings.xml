@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Otp Demo</string>
+    <string name="medium_link">https://saurabhpant.medium.com</string>
+    <string name="github_link">https://github.com/aqua30</string>
 
     <string name="aqua30">\@aqua30</string>
     <string name="header_login">Login</string>
@@ -14,6 +16,7 @@
     <string name="need_help">Need help?</string>
     <string name="contact_support">Contact support</string>
     <string name="sure_logout">Logout?</string>
+    <string name="logout">Logout</string>
     <string name="welcome">Welcome</string>
     <string name="hey_there">Hey there!</string>
     <string name="you_are">You are</string>

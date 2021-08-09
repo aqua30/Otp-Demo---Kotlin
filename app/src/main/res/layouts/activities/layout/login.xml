@@ -31,8 +31,8 @@
         layout="@layout/header"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="@id/guide_left"
-        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintStart_toStartOf="@id/guide_left"
+        app:layout_constraintEnd_toEndOf="@id/guide_right"
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
@@ -49,8 +49,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/guide_left"
-        app:layout_constraintRight_toLeftOf="@id/guide_right"
+        app:layout_constraintStart_toEndOf="@id/guide_left"
+        app:layout_constraintEnd_toStartOf="@id/guide_right"
         app:layout_constraintTop_toBottomOf="@id/banner_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

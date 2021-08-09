@@ -13,11 +13,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_aqua"
         android:transitionName="@string/image_logo_transition"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/blue" />
+        app:tint="@color/orange" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,7 +30,7 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://saurabhpant.medium.com/"
+            android:text="@string/medium_link"
             android:textSize="18sp"
             android:textColor="@color/slate"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -58,7 +54,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://github.com/aqua30"
+            android:text="@string/github_link"
             android:textSize="18sp"
             android:textColor="@color/slate"
             android:layout_marginStart="@dimen/dimen_8dp"

@@ -4,7 +4,7 @@
 
     <corners android:radius="8dp" />
 
-    <solid android:color="@color/orange" />
+    <solid android:color="@color/text_gray" />
 
     <size
         android:width="270dp"
