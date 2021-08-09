@@ -13,10 +13,11 @@ import com.aqua30.otpdemo.data.impl.prefs.IPref
 import com.aqua30.otpdemo.data.DELAY_HOME
 import com.aqua30.otpdemo.data.DELAY_LOGIN
 import com.aqua30.otpdemo.data.KEY_USER_LOGIN
+import com.aqua30.otpdemo.data.impl.resrc.IRes
 import com.aqua30.otpdemo.koltin.R
 import com.aqua30.otpdemo.koltin.databinding.SplashBinding
-import com.aqua30.otpdemo.screens.navigator.Navigator
-import com.aqua30.otpdemo.screens.navigator.Screen
+import com.aqua30.otpdemo.navigator.Navigator
+import com.aqua30.otpdemo.navigator.Screen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -27,6 +28,7 @@ class SplashActivity : BaseActivity() {
 
     @Inject lateinit var navigor: Navigator
     @Inject lateinit var pref: IPref
+    @Inject lateinit var res: IRes
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +48,7 @@ class SplashActivity : BaseActivity() {
 
     private fun loadNextScreen(screen: Screen, delay: Long) {
         Handler(Looper.getMainLooper()).postDelayed({
-            navigor.navigateTo(screen)
+            navigor.navigateTo(screen, logoImage, res.str(R.string.image_logo_transition))
         }, delay)
     }
 

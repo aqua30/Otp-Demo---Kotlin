@@ -1,7 +1,7 @@
 package com.aqua30.otpdemo.dependencies
 
-import com.aqua30.otpdemo.screens.navigator.Navigator
-import com.aqua30.otpdemo.screens.navigator.NavigatorImpl
+import com.aqua30.otpdemo.navigator.Navigator
+import com.aqua30.otpdemo.navigator.NavigatorImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

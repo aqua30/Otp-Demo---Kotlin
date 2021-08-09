@@ -3,6 +3,7 @@ package com.aqua30.otpdemo.data
 const val KEY_USER_LOGIN = "is_user_logged_in"
 const val DELAY_HOME = 1000L
 const val DELAY_LOGIN = 2000L
+const val DELAY_PHONE_PROMPT = 600L
 
 /* events used by view models */
 const val EVENT_SEND_OTP = 1

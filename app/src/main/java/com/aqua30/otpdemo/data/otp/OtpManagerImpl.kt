@@ -4,7 +4,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.MutableLiveData
 import com.aqua30.otpdemo.data.*
 import com.aqua30.otpdemo.data.EVENT_SEND_FAILED
-import com.aqua30.otpdemo.screens.navigator.Screen
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential

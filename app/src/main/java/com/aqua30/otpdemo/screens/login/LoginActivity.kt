@@ -1,6 +1,7 @@
 package com.aqua30.otpdemo.screens.login
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
@@ -16,8 +17,8 @@ import com.aqua30.otpdemo.screens.login.sendotp.SendOtpFragment
 import com.aqua30.otpdemo.screens.login.sendotp.SendOtpViewModel
 import com.aqua30.otpdemo.screens.login.validateotp.ValidateOtpFragment
 import com.aqua30.otpdemo.screens.login.validateotp.ValidateOtpViewModel
-import com.aqua30.otpdemo.screens.navigator.Navigator
-import com.aqua30.otpdemo.screens.navigator.Screen
+import com.aqua30.otpdemo.navigator.Navigator
+import com.aqua30.otpdemo.navigator.Screen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -29,8 +30,10 @@ class LoginActivity: BaseActivity() {
     @Inject lateinit var res: IRes
     @Inject lateinit var otpManager: IOtpManager
 
+    private lateinit var binding: LoginBinding
     private lateinit var bannerHeaderView: TextView
     private lateinit var bannerSubHeaderView: TextView
+    private lateinit var bannerImage: ImageView
 
     private val sendOtpViewModel: SendOtpViewModel by viewModels()
     private val validateOtpViewModel: ValidateOtpViewModel by viewModels()
@@ -88,8 +91,7 @@ class LoginActivity: BaseActivity() {
                 EVENT_VALIDATE_SUCCESS -> {
                     validateOtpViewModel.validateOtpState(true)
                     pref.put(KEY_USER_LOGIN, true)
-                    navigor.navigateTo(Screen.HOME)
-                    supportFragmentManager.popBackStack()
+                    navigor.navigateTo(Screen.HOME, bannerImage, res.str(R.string.image_banner_transition))
                 }
                 EVENT_VALIDATE_FAILED -> validateOtpViewModel.validateOtpState(false)
             }
@@ -105,9 +107,10 @@ class LoginActivity: BaseActivity() {
     }
 
     private fun bindViews() {
-        val binding: LoginBinding = binding() as LoginBinding
-        bannerHeaderView = binding.bannerView.bannerHeader
-        bannerSubHeaderView = binding.bannerView.bannerSubHeader
+        binding = binding() as LoginBinding
+        bannerHeaderView = binding.bannerHeader
+        bannerSubHeaderView = binding.bannerSubHeader
+        bannerImage = binding.bannerImage
     }
 
     override fun binding(): ViewBinding {
