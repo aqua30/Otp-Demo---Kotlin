@@ -11,6 +11,10 @@ import com.aqua30.otpdemo.screens.login.LoginActivity
 import androidx.core.util.Pair;
 import javax.inject.Inject
 
+/**
+ * Class used to navigate from one page to another.
+ * It uses screen code.
+ * */
 class NavigatorImpl @Inject constructor(
     private val activity: FragmentActivity,
     val res: IRes): Navigator {

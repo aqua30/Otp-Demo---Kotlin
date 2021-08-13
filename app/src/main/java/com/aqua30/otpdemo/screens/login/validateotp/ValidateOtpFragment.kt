@@ -21,9 +21,14 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ValidateOtpFragment: Fragment(), OtpReceivedInterface {
 
+    /* view objects */
     private lateinit var otpView: OtpView
     private lateinit var viewBinding: FragValidateOtpBinding
+
+    /* sms retriever to auto read and populate otp */
     private val smsReceiver = SmsBroadcastReceiver()
+
+    /* view model objects */
     private val viewModel: ValidateOtpViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {

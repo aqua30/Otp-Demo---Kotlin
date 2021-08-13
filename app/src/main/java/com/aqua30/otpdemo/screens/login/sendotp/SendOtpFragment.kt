@@ -31,9 +31,14 @@ import me.ibrahimsn.lib.PhoneNumberKit
 @AndroidEntryPoint
 class SendOtpFragment: Fragment() {
 
+    /* view objects */
     lateinit var editPhone: TextInputEditText
     lateinit var viewBinding: FragSendOtpBinding
+
+    /* view mode object */
     private val viewModel: SendOtpViewModel by activityViewModels()
+
+    /* phone number prompt launcher object */
     private lateinit var promptLauncher: ActivityResultLauncher<IntentSenderRequest>
 
     override fun onCreateView(
@@ -44,7 +49,6 @@ class SendOtpFragment: Fragment() {
         viewBinding = FragSendOtpBinding.inflate(inflater,container,false)
         viewBinding.viewModel = viewModel
         editPhone = viewBinding.editPhone
-        formatPhoneField()
         bindViews()
         registerPhonePrompt()
         return viewBinding.root
@@ -59,17 +63,7 @@ class SendOtpFragment: Fragment() {
     }
 
     private fun bindViews() {
-        editPhone.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-
-            override fun afterTextChanged(s: Editable?) {
-                s?.let {
-                    viewModel.mPhoneNumber = it.toString()
-                }
-            }
-        })
+        editPhone.addTextChangedListener(viewModel.phoneListener)
     }
 
     private fun registerPhonePrompt() {
@@ -83,11 +77,6 @@ class SendOtpFragment: Fragment() {
         } catch (e: IntentSender.SendIntentException) {
             e.printStackTrace()
         }
-    }
-
-    private fun formatPhoneField() {
-        val phoneNumberKit = PhoneNumberKit(activity as FragmentActivity)
-        phoneNumberKit.attachToInput(viewBinding.containerPhone, viewModel.mCountryCode)
     }
 
     companion object Companion {

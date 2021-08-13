@@ -1,6 +1,8 @@
 package com.aqua30.otpdemo.screens.login.sendotp
 
 import android.content.Context
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,7 +24,6 @@ class SendOtpViewModel @Inject constructor(
     val mError = ObservableBoolean(false)
 
     /* variables required for otp sending process */
-    var mCountryCode: Int = getCountryCode(context)
     var mCountryISO: String = getCountryISO(context)
     var mPhoneNumber: String = ""
 
@@ -46,5 +47,18 @@ class SendOtpViewModel @Inject constructor(
 
     fun phoneNumber(): String {
         return otpUseCase.formattedNumber()
+    }
+
+    val phoneListener = object: TextWatcher {
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+        override fun afterTextChanged(s: Editable?) {
+            s?.let {
+                mPhoneNumber = it.toString()
+                mError.set(false)
+            }
+        }
     }
 }

@@ -25,19 +25,23 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class LoginActivity: BaseActivity() {
 
-    @Inject lateinit var navigor: Navigator
-    @Inject lateinit var pref: IPref
-    @Inject lateinit var res: IRes
-    @Inject lateinit var otpManager: IOtpManager
-
+    /* view objects */
     private lateinit var binding: LoginBinding
     private lateinit var bannerHeaderView: TextView
     private lateinit var bannerSubHeaderView: TextView
     private lateinit var bannerImage: ImageView
 
+    /* dependency objects */
+    @Inject lateinit var navigor: Navigator
+    @Inject lateinit var pref: IPref
+    @Inject lateinit var res: IRes
+    @Inject lateinit var otpManager: IOtpManager
+
+    /* view models objects */
     private val sendOtpViewModel: SendOtpViewModel by viewModels()
     private val validateOtpViewModel: ValidateOtpViewModel by viewModels()
 
+    /* variable to identifier otp request state */
     private var otpRequestState = EVENT_SEND_OTP
 
     override fun onCreate(savedInstanceState: Bundle?) {

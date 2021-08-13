@@ -69,4 +69,10 @@
     <style name="YellowButton" parent="ActionButton">
         <item name="android:backgroundTint">@color/yellow</item>
     </style>
+
+    <style name="SmallText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
 </resources>

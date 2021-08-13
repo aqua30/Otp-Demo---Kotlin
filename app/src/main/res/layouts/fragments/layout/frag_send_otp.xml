@@ -7,28 +7,23 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/container_phone"
-            android:layout_width="@dimen/dimen_0dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_phone"
+            style="@style/FieldText"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_50dp"
-            android:layout_marginTop="@dimen/dimen_16dp"
-            app:hintEnabled="false"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:background="@android:color/transparent"
+            android:enabled="@{viewModel.mPhoneEnabled}"
+            android:hint="@string/mobile_number"
+            android:textColorHint="@color/text_gray"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawableTint="@color/slate"
+            android:drawablePadding="@dimen/dimen_16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_phone_header">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_phone"
-                style="@style/FieldText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:enabled="@{viewModel.mPhoneEnabled}"
-                android:hint="Mobile number"
-                android:textColorHint="@color/text_gray"
-                android:inputType="phone" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@id/view_phone_header"/>
 
         <FrameLayout
             android:layout_width="@dimen/dimen_85dp"
@@ -66,7 +61,7 @@
             android:gravity="center_vertical"
             android:text="@string/invalid_number"
             android:visibility="@{viewModel.mError? View.VISIBLE : View.GONE}"
-            app:layout_constraintStart_toStartOf="@id/container_phone"
+            app:layout_constraintStart_toStartOf="@id/edit_phone"
             app:layout_constraintTop_toBottomOf="@id/view_phone_underline" />
 
         <TextView
@@ -83,10 +78,10 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="@dimen/dimen_1dp"
             android:layout_marginTop="@dimen/dimen_8dp"
-            android:background="@color/slate"
-            app:layout_constraintStart_toStartOf="@id/container_phone"
-            app:layout_constraintEnd_toEndOf="@id/container_phone"
-            app:layout_constraintTop_toBottomOf="@id/container_phone" />
+            android:background="@color/background_gray"
+            app:layout_constraintStart_toStartOf="@id/edit_phone"
+            app:layout_constraintEnd_toEndOf="@id/edit_phone"
+            app:layout_constraintTop_toBottomOf="@id/edit_phone" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_bottom"

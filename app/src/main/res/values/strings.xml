@@ -25,6 +25,9 @@
     <string name="hint_country_search">Search country by name, code, iso</string>
     <string name="guideline">You have successfully authenticated via Mobile OTP using Firebase. You can logout anytime using the logout button below.</string>
     <string name="logout_warning">You are about to logout of the app. Once logged out, you will have to log in again.</string>
+    <string name="splash_sub_heading">You are about to use Otp login using\nFirebase, Hilt and other best practices</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="developer"><![CDATA[<b>Developed by Saurabh</b><br></br><b>Github</b>: https://github.com/aqua30<br></br><b>Medium</b>: https://saurabhpant.medium.com]]></string>
 
 
     <!-- animation transitions -->

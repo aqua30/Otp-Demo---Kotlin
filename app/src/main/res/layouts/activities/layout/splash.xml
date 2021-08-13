@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,61 +7,54 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <TextView
+        android:id="@+id/view_heading"
+        style="@style/BannerText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_top"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:text="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/view_subheading"
+        style="@style/FieldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/view_heading"
+        app:layout_constraintTop_toBottomOf="@id/view_heading"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/splash_sub_heading"/>
+
     <ImageView
         android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_logo"
         android:transitionName="@string/image_logo_transition"
-        app:tint="@color/orange" />
+        app:layout_constraintTop_toBottomOf="@id/view_subheading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/view_developed_by"
+        style="@style/SmallText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:text="@string/developer"/>
 
-        <ImageView
-            android:layout_width="@dimen/dimen_45dp"
-            android:layout_height="@dimen/dimen_45dp"
-            android:src="@drawable/ic_medium" />
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/medium_link"
-            android:textSize="18sp"
-            android:textColor="@color/slate"
-            android:layout_marginStart="@dimen/dimen_8dp"
-            android:fontFamily="@font/open_sans_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageView
-            android:layout_width="@dimen/dimen_45dp"
-            android:layout_height="@dimen/dimen_45dp"
-            android:src="@drawable/ic_github" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/github_link"
-            android:textSize="18sp"
-            android:textColor="@color/slate"
-            android:layout_marginStart="@dimen/dimen_8dp"
-            android:fontFamily="@font/open_sans_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

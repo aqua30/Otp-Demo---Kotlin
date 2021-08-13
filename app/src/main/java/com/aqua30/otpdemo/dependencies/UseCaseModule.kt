@@ -14,9 +14,4 @@ object UseCaseModule {
     fun provideOtpUseCase() : OtpUseCase {
         return OtpUseCase()
     }
-
-    /*@Provides
-    fun provideValidateOtpUseCase() : ValidateOtpUseCase {
-        return ValidateOtpUseCase()
-    }*/
 }

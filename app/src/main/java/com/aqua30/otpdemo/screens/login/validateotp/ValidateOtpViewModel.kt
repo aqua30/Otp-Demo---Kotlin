@@ -13,18 +13,11 @@ import com.aqua30.otpdemo.data.EVENT_VALIDATE_OTP
 import com.aqua30.otpdemo.data.impl.resrc.IRes
 import com.aqua30.otpdemo.koltin.R
 import com.aqua30.otpdemo.screens.login.otpview.OnOtpCompletionListener
-import com.aqua30.otpdemo.screens.login.sendotp.OtpUseCase
-import com.google.firebase.auth.PhoneAuthProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 @HiltViewModel
-class ValidateOtpViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
-    val resource: IRes,
-    private val useCase: OtpUseCase
-): ViewModel() {
+class ValidateOtpViewModel @Inject constructor(val resource: IRes): ViewModel() {
 
     /* binding variables */
     val loaderVisibility = ObservableBoolean(false)
