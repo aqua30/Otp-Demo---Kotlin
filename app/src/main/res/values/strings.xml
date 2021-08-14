@@ -3,7 +3,7 @@
     <string name="medium_link">https://saurabhpant.medium.com</string>
     <string name="github_link">https://github.com/aqua30</string>
 
-    <string name="aqua30">\@aqua30</string>
+    <string name="splash_title">OTP\nDemo</string>
     <string name="header_login">Login</string>
     <string name="header_home">Home</string>
     <string name="resend">Resend OTP</string>

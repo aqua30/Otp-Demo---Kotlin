@@ -7,22 +7,15 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".05"/>
-
     <TextView
         android:id="@+id/view_heading"
         style="@style/BannerText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guide_top"
+        app:layout_constraintTop_toBottomOf="@id/image_banner"
         android:layout_marginStart="@dimen/dimen_16dp"
-        android:text="@string/app_name"/>
+        android:text="@string/splash_title"/>
 
     <TextView
         android:id="@+id/view_subheading"
@@ -35,15 +28,22 @@
         android:text="@string/splash_sub_heading"/>
 
     <ImageView
+        android:id="@+id/image_banner"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/ic_banner_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
         android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_logo"
         android:transitionName="@string/image_logo_transition"
+        app:layout_constraintStart_toStartOf="@id/view_heading"
         app:layout_constraintTop_toBottomOf="@id/view_subheading"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/view_developed_by"/>
 
     <TextView
         android:id="@+id/view_developed_by"

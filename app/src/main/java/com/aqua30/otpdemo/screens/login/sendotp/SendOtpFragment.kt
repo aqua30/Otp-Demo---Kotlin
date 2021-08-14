@@ -1,13 +1,10 @@
 package com.aqua30.otpdemo.screens.login.sendotp
 
 import android.app.Activity
-import android.content.Context
 import android.content.IntentSender
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,15 +14,12 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.activityViewModels
-import com.aqua30.otpdemo.data.DELAY_HOME
 import com.aqua30.otpdemo.data.DELAY_PHONE_PROMPT
-import com.aqua30.otpdemo.data.getCountryCode
 import com.aqua30.otpdemo.data.getPhoneHintIntent
 import com.aqua30.otpdemo.koltin.databinding.FragSendOtpBinding
 import com.google.android.gms.auth.api.credentials.Credential
 import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
-import me.ibrahimsn.lib.PhoneNumberKit
 
 
 @AndroidEntryPoint

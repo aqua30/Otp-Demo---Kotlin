@@ -3,12 +3,10 @@
     <style name="AppTheme" parent="Theme.MaterialComponents">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="android:statusBarColor">@color/white</item>
         <item name="colorPrimary">@color/pink</item>
         <item name="colorPrimaryDark">@color/purple</item>
         <item name="colorAccent">@color/blue</item>
-        <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowBackground">@color/background_gray</item>
+        <item name="android:windowBackground">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
 

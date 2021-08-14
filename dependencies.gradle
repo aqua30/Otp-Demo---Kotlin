@@ -32,15 +32,13 @@ ext {
     kapts = [ daggerCompiler: "com.google.dagger:hilt-compiler:$vHilt" ]
 
     lifecycle = [
-//            livedata: "androidx.lifecycle:lifecycle-livedata-ktx:$vVM",
             viewModelKtx: "androidx.hilt:hilt-lifecycle-viewmodel:$vHiltCompiler"
     ]
 
     firebase = [ auth: 'com.google.firebase:firebase-auth:20.0.2' ]
 
     phoneValidator = [
-            lib: 'com.googlecode.libphonenumber:libphonenumber:8.12.3',
-            validator: 'com.github.ibrahimsn98:PhoneNumberKit:1.7.5'
+            lib: 'com.googlecode.libphonenumber:libphonenumber:8.12.3'
     ]
 
     playServices = [
