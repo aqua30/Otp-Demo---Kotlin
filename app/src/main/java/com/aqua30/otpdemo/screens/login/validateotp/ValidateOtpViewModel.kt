@@ -1,6 +1,5 @@
 package com.aqua30.otpdemo.screens.login.validateotp
 
-import android.content.Context
 import android.os.CountDownTimer
 import android.util.Log
 import androidx.databinding.ObservableBoolean

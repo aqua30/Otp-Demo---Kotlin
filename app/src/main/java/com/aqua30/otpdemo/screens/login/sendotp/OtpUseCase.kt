@@ -1,7 +1,6 @@
 package com.aqua30.otpdemo.screens.login.sendotp
 
 import android.util.Log
-import com.google.firebase.auth.PhoneAuthProvider
 import com.google.i18n.phonenumbers.NumberParseException
 import com.google.i18n.phonenumbers.PhoneNumberUtil
 import com.google.i18n.phonenumbers.Phonenumber

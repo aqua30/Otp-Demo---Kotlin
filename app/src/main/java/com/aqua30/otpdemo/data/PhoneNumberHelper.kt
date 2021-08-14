@@ -2,12 +2,7 @@ package com.aqua30.otpdemo.data
 
 import android.app.PendingIntent
 import android.content.Context
-import android.content.IntentSender
-import android.os.Bundle
 import android.telephony.TelephonyManager
-import androidx.activity.result.IntentSenderRequest
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat.startIntentSenderForResult
 import androidx.fragment.app.FragmentActivity
 import com.google.android.gms.auth.api.credentials.Credentials
 import com.google.android.gms.auth.api.credentials.CredentialsOptions

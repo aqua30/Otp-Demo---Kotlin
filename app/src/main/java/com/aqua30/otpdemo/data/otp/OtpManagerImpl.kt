@@ -2,8 +2,10 @@ package com.aqua30.otpdemo.data.otp
 
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.MutableLiveData
-import com.aqua30.otpdemo.data.*
 import com.aqua30.otpdemo.data.EVENT_SEND_FAILED
+import com.aqua30.otpdemo.data.EVENT_SEND_SUCCESS
+import com.aqua30.otpdemo.data.EVENT_VALIDATE_FAILED
+import com.aqua30.otpdemo.data.EVENT_VALIDATE_SUCCESS
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential

@@ -7,7 +7,6 @@ import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.aqua30.otpdemo.data.EVENT_SEND_OTP
-import com.aqua30.otpdemo.data.getCountryCode
 import com.aqua30.otpdemo.data.getCountryISO
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -40,9 +39,9 @@ class SendOtpViewModel @Inject constructor(
         if (isNumberValid) otpEvents.value = EVENT_SEND_OTP
     }
 
-    fun otpSendStatus(isSent: Boolean) {
-        mLoading.set(!isSent)
-        mPhoneEnabled.set(isSent)
+    fun otpUpdateStatus() {
+        mLoading.set(false)
+        mPhoneEnabled.set(true)
     }
 
     fun phoneNumber(): String {

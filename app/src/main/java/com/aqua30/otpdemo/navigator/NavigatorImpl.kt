@@ -5,10 +5,8 @@ import android.view.View
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.FragmentActivity
 import com.aqua30.otpdemo.data.impl.resrc.IRes
-import com.aqua30.otpdemo.koltin.R
 import com.aqua30.otpdemo.screens.home.HomeActivity
 import com.aqua30.otpdemo.screens.login.LoginActivity
-import androidx.core.util.Pair;
 import javax.inject.Inject
 
 /**

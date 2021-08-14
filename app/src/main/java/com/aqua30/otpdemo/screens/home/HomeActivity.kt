@@ -7,20 +7,29 @@ import androidx.viewbinding.ViewBinding
 import com.aqua30.otpdemo.base.BaseActivity
 import com.aqua30.otpdemo.data.KEY_USER_LOGIN
 import com.aqua30.otpdemo.data.impl.prefs.IPref
+import com.aqua30.otpdemo.data.impl.resrc.IRes
 import com.aqua30.otpdemo.koltin.R
 import com.aqua30.otpdemo.koltin.databinding.HomeBinding
+import com.aqua30.otpdemo.navigator.Navigator
+import com.aqua30.otpdemo.navigator.Screen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeActivity: BaseActivity() {
 
+    /* binding objects */
+    private lateinit var binding: HomeBinding
+
+    /* dependency objects */
+    @Inject lateinit var navigor: Navigator
     @Inject lateinit var pref: IPref
+    @Inject lateinit var res: IRes
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val homeBinding: HomeBinding = viewBinding as HomeBinding
-        homeBinding.includedHeader.viewTextLoginHeader.text = getString(R.string.header_home)
+        binding = viewBinding as HomeBinding
+        binding.includedHeader.viewTextLoginHeader.text = getString(R.string.header_home)
     }
 
     override fun binding(): ViewBinding {
@@ -37,7 +46,7 @@ class HomeActivity: BaseActivity() {
         dialogBuilder.setView(dialogView)
         dialogView.findViewById<View>(R.id.view_image_logout).setOnClickListener {
             pref.put(KEY_USER_LOGIN, false)
-            finishAffinity()
+            navigor.navigateTo(Screen.LOGIN, binding.viewImageSmartphone, res.str(R.string.image_banner_transition))
         }
         dialogBuilder.show()
     }

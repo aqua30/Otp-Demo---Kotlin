@@ -13,12 +13,12 @@ import com.aqua30.otpdemo.data.impl.resrc.IRes
 import com.aqua30.otpdemo.data.otp.IOtpManager
 import com.aqua30.otpdemo.koltin.R
 import com.aqua30.otpdemo.koltin.databinding.LoginBinding
+import com.aqua30.otpdemo.navigator.Navigator
+import com.aqua30.otpdemo.navigator.Screen
 import com.aqua30.otpdemo.screens.login.sendotp.SendOtpFragment
 import com.aqua30.otpdemo.screens.login.sendotp.SendOtpViewModel
 import com.aqua30.otpdemo.screens.login.validateotp.ValidateOtpFragment
 import com.aqua30.otpdemo.screens.login.validateotp.ValidateOtpViewModel
-import com.aqua30.otpdemo.navigator.Navigator
-import com.aqua30.otpdemo.navigator.Screen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -79,7 +79,7 @@ class LoginActivity: BaseActivity() {
                     showMessage(String.format(getString(R.string.otp_sent), sendOtpViewModel.phoneNumber()))
                     when(otpRequestState) {
                         EVENT_SEND_OTP -> {
-                            sendOtpViewModel.otpSendStatus(true)
+                            sendOtpViewModel.otpUpdateStatus()
                             bindFragment(ValidateOtpFragment.instance(), ValidateOtpFragment::class.simpleName)
                         }
                         EVENT_RESEND_OTP -> validateOtpViewModel.otpSendStatus(true)
@@ -87,7 +87,7 @@ class LoginActivity: BaseActivity() {
                 }
                 EVENT_SEND_FAILED -> {
                     when(otpRequestState) {
-                        EVENT_SEND_OTP -> sendOtpViewModel.otpSendStatus(false)
+                        EVENT_SEND_OTP -> sendOtpViewModel.otpUpdateStatus()
                         EVENT_RESEND_OTP -> validateOtpViewModel.otpSendStatus(false)
                     }
                     showMessage(String.format(getString(R.string.otp_not_sent), sendOtpViewModel.phoneNumber()))
@@ -111,7 +111,7 @@ class LoginActivity: BaseActivity() {
     }
 
     private fun bindViews() {
-        binding = binding() as LoginBinding
+        binding = viewBinding as LoginBinding
         bannerHeaderView = binding.bannerHeader
         bannerSubHeaderView = binding.bannerSubHeader
         bannerImage = binding.bannerImage
