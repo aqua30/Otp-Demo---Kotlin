@@ -1,5 +1,6 @@
 # Otp Demo
 A learning project which focuses on designing an OTP flow using Firebase.
+![Screenshot](Splash.jpg)
 
 ## Components used
 - Firebase for sending and verifying otp 🔥
