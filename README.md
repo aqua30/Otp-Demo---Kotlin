@@ -24,3 +24,7 @@ This project focuses majorly on following aspects
 2. Using the best practices to make UI smooth
 3. Using all the latest versions of libraries at the moment of writing this
 4. Clean code
+
+For detailed explanation of the app
+
+https://saurabhpant.medium.com/otp-login-using-firebase-hilt-jetpack-components-all-together-in-kotlin-718f7c6974aa
