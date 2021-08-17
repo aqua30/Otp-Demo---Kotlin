@@ -1,7 +1,7 @@
 # Otp Demo
 A learning project which focuses on designing an OTP flow using Firebase.
 
-https://user-images.githubusercontent.com/4559525/129440341-33970c94-6ea9-4156-8c1d-5e9a4baee7be.mp4
+Article: https://saurabhpant.medium.com/otp-login-using-firebase-hilt-jetpack-components-all-together-in-kotlin-718f7c6974aa
 
 ![Screenshot](App.png)
 
@@ -25,6 +25,4 @@ This project focuses majorly on following aspects
 3. Using all the latest versions of libraries at the moment of writing this
 4. Clean code
 
-For detailed explanation of the app
-
-https://saurabhpant.medium.com/otp-login-using-firebase-hilt-jetpack-components-all-together-in-kotlin-718f7c6974aa
+https://user-images.githubusercontent.com/4559525/129440341-33970c94-6ea9-4156-8c1d-5e9a4baee7be.mp4
